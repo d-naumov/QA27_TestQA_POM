@@ -18,6 +18,21 @@ public class HomePage extends BasePage {
     click(javaScriptAlert);
     return new AlertsPage(driver);
   }
+
+  @FindBy(xpath = "//a[contains(text(),'Dropdown')]")
+  WebElement selectDropdown;
+
+  public DropdownPage getDropdown() {
+    click(selectDropdown);
+    return new DropdownPage(driver);
+  }
+
+  @FindBy(xpath = "//a[contains(text(),'Multiple Windows')]")
+  WebElement multipleWindows;
+
+  public WindowsPage getWindowsPage() {
+    click(multipleWindows);
+    return new WindowsPage(driver);
+
+  }
 }
-//a.='JavaScript Alerts')
-//a[contains(text(),'JavaScript Alerts')]
